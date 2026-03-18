@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" href="success.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.success-container {
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 320px;
+}
+
+.icon {
+    font-size: 60px;
+    color: green;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+.txn {
+    font-weight: bold;
+    margin: 15px 0;
+    color: #000;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #007bff;
+}
+    </style>
+<body>
+
+<div class="success-container">
+    <div class="card">
+        <div class="icon">✔</div>
+
+        <h1 id="title">Transaction Successful</h1>
+
+        <p id="message">
+            Your request has been completed successfully.
+        </p>
+
+        <p class="txn" id="txnId">
+            Transaction ID: #123456789
+        </p>
+
+        <button onclick="goHome()">Go to Dashboard</button>
+    </div>
+</div>
+<script>
+// Example: Customize success page dynamically
+
+// You can pass values using localStorage or URL params
+
+const params = new URLSearchParams(window.location.search);
+
+const title = params.get("title");
+const message = params.get("message");
+const txn = params.get("txn");
+
+// Set dynamic content
+if (title) document.getElementById("title").innerText = title;
+if (message) document.getElementById("message").innerText = message;
+if (txn) document.getElementById("txnId").innerText = "Transaction ID: " + txn;
+
+// Button action
+function goHome() {
+    window.location.href = "main.html"; // change to your page
+}
+</script>
+</body>
+</html>

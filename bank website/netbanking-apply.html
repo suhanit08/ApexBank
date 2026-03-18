@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Net Banking Apply</title>
+   <style>
+    body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 360px;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, select {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="netForm">
+        <h2>💻 Net Banking Registration</h2>
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="text" id="account" placeholder="Account Number" required>
+
+        <input type="text" id="cif" placeholder="CIF Number" required>
+
+        <select id="accountType" required>
+            <option value="">Select Account Type</option>
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option>
+        </select>
+
+        <input type="text" id="userid" placeholder="Create User ID" required>
+
+        <input type="password" id="password" placeholder="Create Password" required>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("netForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let account = document.getElementById("account").value;
+    let cif = document.getElementById("cif").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Validation
+    if (account.length < 8) {
+        alert("Invalid Account Number");
+        return;
+    }
+
+    if (cif.length < 6) {
+        alert("Invalid CIF Number");
+        return;
+    }
+
+    if (password.length < 6) {
+        alert("Password must be at least 6 characters");
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+    }
+
+    // Generate fake transaction ID
+    let txnId = "NB" + Math.floor(Math.random() * 1000000);
+
+    // Redirect to success page
+    window.location.href = 
+        `sucessbanking.html?title=Registration Successful&message=Net Banking Activated&txn=${txnId}`;
+});
+</script>
+</body>
+</html>

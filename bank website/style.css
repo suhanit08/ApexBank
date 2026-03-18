@@ -1,0 +1,214 @@
+body{
+font-family: Arial;
+margin:0;
+}
+
+/* NAVBAR */
+
+.bank-nav{
+background:#0a3d91;
+}
+
+.logo{
+font-weight:bold;
+font-size:22px;
+}
+
+.login-btn {
+    background-color: #ff3b30;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 15px;
+     display: flex;
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+
+    height: 40px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e03228;
+}
+
+/* HERO */
+
+.hero{
+    background-image: url("bank_bg.jpg"); /* path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 100px 0;
+    color:rgb(119, 119, 247);
+}
+
+.hero-content{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero-card{
+background:white;
+padding:30px;
+border-radius:10px;
+width:250px;
+color:black;
+}
+
+.hero-card select{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+}
+
+.apply-btn{
+background:#0a3d91;
+color:white;
+border:none;
+padding:10px;
+width:100%;
+}
+
+/* SEARCH */
+
+.search-section{
+background:#f3f6fb;
+padding:30px;
+text-align:center;
+}
+
+.search-section input{
+width:60%;
+padding:12px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.search-section button{
+padding:12px 20px;
+background:#0a3d91;
+color:white;
+border:none;
+}
+
+/* SERVICES */
+
+.services{
+padding:60px 0;
+text-align:center;
+}
+
+.service-card{
+padding:20px;
+margin-top:20px;
+border:none;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.service-card button{
+background:#0a3d91;
+color:white;
+border:none;
+padding:8px 15px;
+}
+
+/* SECURITY */
+
+.security{
+padding:50px 0;
+}
+
+.security-card{
+padding:40px;
+border-radius:10px;
+color:white;
+}
+
+.blue{
+background:#3b82f6;
+}
+
+.yellow{
+background:#facc15;
+color:black;
+}
+
+.security-card button{
+margin-top:10px;
+border:none;
+padding:10px 15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+}
+/* LOAN VIDEO SECTION */
+
+.loan-video-section{
+  padding: 60px 0;
+  background: #f7f9fc;
+}
+
+.loan-video-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.loan-text{
+  flex: 1;
+  min-width: 280px;
+}
+
+.loan-text h2{
+  font-size: 36px;
+  color: #0a3d91;
+  margin-bottom: 15px;
+}
+
+.loan-text p{
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.loan-btn{
+  background: #0a3d91;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.video-box{
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.video-box iframe{
+  border-radius: 10px;
+}

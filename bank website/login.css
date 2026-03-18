@@ -1,0 +1,118 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f4f8;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+display:flex;
+width:900px;
+height:500px;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* LEFT SECTION */
+
+.left-section{
+flex:1;
+}
+
+.left-section img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* RIGHT SECTION */
+
+.right-section{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#ffffff;
+}
+
+.login-box{
+width:80%;
+}
+
+.login-box h2{
+text-align:center;
+margin-bottom:25px;
+color:#003366;
+}
+
+/* INPUTS */
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:14px;
+}
+
+/* BUTTON */
+
+.login-box button{
+width:100%;
+padding:12px;
+margin-top:10px;
+border:none;
+background:#0056b3;
+color:white;
+font-size:16px;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.login-box button:hover{
+background:#003f88;
+}
+
+/* LINKS */
+
+.links{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+}
+
+.links a{
+text-decoration:none;
+font-size:13px;
+color:#0056b3;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+/* SIGNUP */
+
+.signup{
+text-align:center;
+margin-top:20px;
+font-size:14px;
+}
+
+#loginMessage{
+margin-top:10px;
+text-align:center;
+font-weight:bold;
+}

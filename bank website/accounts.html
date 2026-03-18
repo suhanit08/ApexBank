@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accounts - Apex Bank</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar color match */
+.bank-nav {
+    background: #0d47a1;
+}
+
+/* Hero */
+.accounts-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-image: url('accoount.webp');
+    background-size: cover;
+    color: black;
+    padding: 80px 0;
+    text-align: center;
+     background-position: center;
+    background-repeat: no-repeat;
+ align-items: center;
+}
+
+/* Cards */
+.account-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.account-card:hover {
+    transform: translateY(-8px);
+}
+
+.account-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.account-btn:hover {
+    background: #0a58ca;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bank-nav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Apex BANK</a>
+
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="accounts.html">Accounts</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Loans</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Cards</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="accounts-hero">
+<h1>Choose Your Account</h1>
+<p>Flexible banking solutions tailored for your needs</p>
+</section>
+
+<!-- ACCOUNTS -->
+<section class="py-5">
+<div class="container">
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="account-card">
+<h4>Savings Account</h4>
+<p>Earn interest with easy access to funds.</p>
+<a href="savinglogin.html" class="account-btn">Open Now</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="account-card">
+<h4>Current Account</h4>
+<p>Best for businesses with unlimited transactions.</p>
+<a href="savinglogin.html" class="account-btn">Open Now</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="account-card">
+<h4>Salary Account</h4>
+<p>Zero balance account for salaried users.</p>
+<a href="savinglogin.html" class="account-btn">Open Now</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+</body>
+</html>

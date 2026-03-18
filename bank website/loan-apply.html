@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Loan Apply</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { background:#f4f6f9; font-family: Arial; }
+
+.form-box {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2 id="title">Loan Application</h2>
+
+<form id="loanForm">
+
+<input id="name" class="form-control mb-3" placeholder="Full Name" required>
+<input id="email" class="form-control mb-3" placeholder="Email" required>
+
+<input id="loanType" class="form-control mb-3" readonly>
+
+<input class="form-control mb-3" placeholder="Loan Amount">
+<input class="form-control mb-3" placeholder="Income">
+
+<button class="btn btn-danger w-100">Submit</button>
+
+</form>
+
+</div>
+
+<script>
+// Get selected loan type
+let type = localStorage.getItem("loanType");
+document.getElementById("loanType").value = type;
+
+// Submit
+document.getElementById("loanForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let appId = "LOAN" + Math.floor(Math.random()*100000);
+
+    let data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        applicationId: appId,
+        type: "Loan"
+    };
+
+    localStorage.setItem("applicationData", JSON.stringify(data));
+
+    window.location.href = "loan.html";
+});
+</script>
+
+</body>
+</html>

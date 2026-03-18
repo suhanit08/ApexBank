@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Banking Apply</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 350px;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input, select {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056d2;
+}
+        </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="mobileForm">
+        <h2>📱 Mobile Banking Registration</h2>
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+        <input type="text" id="account" placeholder="Account Number" required>
+
+        <select id="accountType" required>
+            <option value="">Select Account Type</option>
+            <option value="savings">Savings Account</option>
+            <option value="current">Current Account</option>
+        </select>
+
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+        <input type="email" id="email" placeholder="Email Address" required>
+
+        <input type="password" id="mpin" placeholder="Create MPIN (4 digits)" required>
+
+        <input type="password" id="confirmMpin" placeholder="Confirm MPIN" required>
+
+        <button type="submit">Apply Now</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("mobileForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let account = document.getElementById("account").value;
+    let mobile = document.getElementById("mobile").value;
+    let mpin = document.getElementById("mpin").value;
+    let confirmMpin = document.getElementById("confirmMpin").value;
+
+    // Validation
+    if (account.length < 8) {
+        alert("Invalid Account Number");
+        return;
+    }
+
+    if (mobile.length !== 10) {
+        alert("Mobile number must be 10 digits");
+        return;
+    }
+
+    if (!/^\d{4}$/.test(mpin)) {
+        alert("MPIN must be exactly 4 digits");
+        return;
+    }
+
+    if (mpin !== confirmMpin) {
+        alert("MPIN does not match");
+        return;
+    }
+
+    // Generate fake transaction ID
+    let txnId = "MB" + Math.floor(Math.random() * 1000000);
+
+    // Redirect to success page
+    window.location.href = 
+        `sucessbanking.html?title=Registration Successful&message=Mobile Banking Activated&txn=${txnId}`;
+});
+</script>
+
+</body>
+</html>
